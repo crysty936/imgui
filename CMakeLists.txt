@@ -10,6 +10,10 @@ set(source_files
     imstb_textedit.h
     imstb_truetype.h
 	imgui_tables.cpp
+	backends/imgui_impl_opengl3.h
+	backends/imgui_impl_opengl3.cpp
+	backends/imgui_impl_win32.h
+	backends/imgui_impl_win32.cpp
 )
 
 add_library(imgui STATIC ${source_files})
