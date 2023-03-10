@@ -1362,6 +1362,20 @@ void ImGuiIO::ClearInputKeys()
     MouseWheel = MouseWheelH = 0.0f;
 }
 
+// Cristian: Begin
+
+void ImGuiIO::EnableCursor()
+{
+    ConfigFlags &= ~ImGuiConfigFlags_NoMouseCursorChange;
+}
+
+void ImGuiIO::DisableCursor()
+{
+    ConfigFlags |= ImGuiConfigFlags_NoMouseCursorChange;
+}
+
+// Cristian: End
+
 static ImGuiInputEvent* FindLatestInputEvent(ImGuiInputEventType type, int arg = -1)
 {
     ImGuiContext& g = *GImGui;

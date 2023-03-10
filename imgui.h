@@ -2074,6 +2074,15 @@ struct ImGuiIO
     IMGUI_API void  ClearInputCharacters();                                 // [Internal] Clear the text input buffer manually
     IMGUI_API void  ClearInputKeys();                                       // [Internal] Release all keys
 
+    // Cristian: Begin
+    
+    IMGUI_API void  EnableCursor();
+    IMGUI_API void  DisableCursor();
+    
+    // Cristian: End
+
+
+
     //------------------------------------------------------------------
     // Output - Updated by NewFrame() or EndFrame()/Render()
     // (when reading from the io.WantCaptureMouse, io.WantCaptureKeyboard flags to dispatch your inputs, it is
